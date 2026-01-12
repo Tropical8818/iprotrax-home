@@ -13,6 +13,7 @@ const docsConfig = {
                 { title: "Introduction", href: "/docs" },
                 { title: "Installation", href: "/docs/installation" },
                 { title: "Architecture", href: "/docs/architecture" },
+                { title: "Changelog", href: "/docs/changelog" },
             ]
         },
         {
@@ -20,6 +21,7 @@ const docsConfig = {
             items: [
                 { title: "Product Lines", href: "/docs/concepts/product-lines" },
                 { title: "Orders & WO", href: "/docs/concepts/orders" },
+                { title: "Collaboration", href: "/docs/concepts/collaboration" },
                 { title: "AI Analysis", href: "/docs/concepts/ai-analysis" },
             ]
         },

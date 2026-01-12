@@ -1,14 +1,22 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Github, Twitter } from 'lucide-react';
 
 export function Footer() {
     return (
         <footer className="border-t bg-slate-50">
-            <div className="container py-12 md:py-16">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="container mx-auto max-w-7xl px-6 md:px-8 py-12 md:py-16">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-16">
                     <div className="col-span-1 md:col-span-2">
-                        <Link href="/" className="font-bold text-xl text-indigo-600 mb-4 inline-block">
-                            iProTraX
+                        <Link href="/" className="inline-block mb-6">
+                            <div className="relative w-auto h-10 md:h-12 aspect-[3/1]">
+                                <Image
+                                    src="/logo.png"
+                                    alt="iProTraX Logo"
+                                    fill
+                                    className="object-contain object-left"
+                                />
+                            </div>
                         </Link>
                         <p className="text-slate-500 text-sm max-w-sm">
                             The intelligent production tracking system designed for modern manufacturing.
@@ -22,7 +30,7 @@ export function Footer() {
                             <li><Link href="/#features" className="hover:text-indigo-600">Features</Link></li>
                             <li><Link href="/#pricing" className="hover:text-indigo-600">Pricing</Link></li>
                             <li><Link href="/docs" className="hover:text-indigo-600">Documentation</Link></li>
-                            <li><Link href="/changelog" className="hover:text-indigo-600">Changelog</Link></li>
+                            <li><Link href="/docs/changelog" className="hover:text-indigo-600">Changelog</Link></li>
                         </ul>
                     </div>
 
