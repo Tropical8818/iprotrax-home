@@ -61,8 +61,19 @@ export default function InstallationPage() {
                         {t('Create a', '在根目录创建一个')} <code>.env</code> {t('file in the root directory.', '文件。')}
                     </p>
                     <pre className="bg-slate-900 text-slate-50 p-4 rounded-lg overflow-x-auto not-prose">
-                        <code>OPENAI_API_KEY=sk-your-api-key-here</code>
+                        <code>
+                            {`OPENAI_API_KEY=sk-your-api-key-here
+# Optional: Unlock Pro/Enterprise features
+LICENSE_KEY=your-license-key`}
+                        </code>
                     </pre>
+                    <div className="mt-2 p-3 bg-blue-50 text-blue-800 text-sm rounded border border-blue-100 flex gap-2">
+                        <span className="font-bold">ℹ️ {t('Note:', '注意：')}</span>
+                        {t(
+                            'Without a LICENSE_KEY, the system runs in "Free Tier" (1 Line, 10 Users) forever.',
+                            '如果没有 LICENSE_KEY，系统将永久运行在“免费版”（1条产线，10个用户）模式下。'
+                        )}
+                    </div>
                 </div>
 
                 <div className="relative">

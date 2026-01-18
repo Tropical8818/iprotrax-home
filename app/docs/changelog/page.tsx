@@ -43,13 +43,19 @@ export default function ChangelogPage() {
                             <li className="flex items-start gap-3">
                                 <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-slate-400 flex-shrink-0" />
                                 <span className="text-slate-700">
-                                    <strong>{t('Active Sessions:', '活跃会话：')}</strong> {t('Real-time tracking with live timer and standard time reference.', '带有实时计时器和标准时间参考的实时跟踪。')}
+                                    <strong>{t('Free Tier:', '免费版：')}</strong> {t('Permanent free access for small teams (1 Line, 10 Users).', '小团队永久免费访问（1条产线，10个用户）。')}
                                 </span>
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-slate-400 flex-shrink-0" />
                                 <span className="text-slate-700">
-                                    <strong>{t('Efficiency Analytics:', '效率分析：')}</strong> {t('Automatic calculation of worker efficiency vs standard times.', '自动计算工人效率与标准时间的对比。')}
+                                    <strong>{t('Security Upgrade:', '安全升级：')}</strong> {t('Implemented ES256 hardware-backed signing (YubiKey) for maximum license security.', '实施了 ES256 硬件签名（YubiKey）以实现最高的许可证安全性。')}
+                                </span>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-slate-400 flex-shrink-0" />
+                                <span className="text-slate-700">
+                                    <strong>{t('Productivity Engine:', '生产力引擎：')}</strong> {t('Active Sessions card, Real-time Efficiency, and Quick Stop.', '活跃会话卡片、实时效率和快速停止。')}
                                 </span>
                             </li>
                             <li className="flex items-start gap-3">

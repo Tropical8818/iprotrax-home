@@ -40,6 +40,7 @@ const docsConfig = {
                 { title: "Operation View", titleZh: "操作视图", href: "/docs/manual/operation" },
                 { title: "Unified Analytics", titleZh: "统一分析", href: "/docs/manual/analytics" },
                 { title: "Settings", titleZh: "设置", href: "/docs/manual/settings" },
+                { title: "License & Free Tier", titleZh: "许可与免费版", href: "/docs/manual/license" },
                 { title: "Kiosk Mode", titleZh: "看板模式", href: "/docs/manual/kiosk" },
             ]
         },
