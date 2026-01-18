@@ -26,6 +26,7 @@ const docsConfig = {
             titleZh: "核心概念",
             items: [
                 { title: "Product Lines", titleZh: "生产线", href: "/docs/concepts/product-lines" },
+                { title: "Productivity Engine", titleZh: "生产力引擎", href: "/docs/concepts/productivity" },
                 { title: "Orders & WO", titleZh: "订单与工单", href: "/docs/concepts/orders" },
                 { title: "Collaboration", titleZh: "协作机制", href: "/docs/concepts/collaboration" },
                 { title: "AI Analysis", titleZh: "AI 分析", href: "/docs/concepts/ai-analysis" },
@@ -36,6 +37,8 @@ const docsConfig = {
             titleZh: "用户手册",
             items: [
                 { title: "Dashboard", titleZh: "仪表盘", href: "/docs/manual/dashboard" },
+                { title: "Operation View", titleZh: "操作视图", href: "/docs/manual/operation" },
+                { title: "Unified Analytics", titleZh: "统一分析", href: "/docs/manual/analytics" },
                 { title: "Settings", titleZh: "设置", href: "/docs/manual/settings" },
                 { title: "Kiosk Mode", titleZh: "看板模式", href: "/docs/manual/kiosk" },
             ]

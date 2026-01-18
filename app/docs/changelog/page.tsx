@@ -21,6 +21,47 @@ export default function ChangelogPage() {
             </p>
 
             <div className="relative border-l-2 border-slate-100 ml-4 space-y-12">
+                {/* V8.1.0 */}
+                <div className="relative pl-8">
+                    <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-emerald-600 ring-4 ring-white shadow-sm" />
+
+                    <header className="mb-4">
+                        <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 mb-1">
+                            <h2 className="text-2xl font-bold text-slate-900 m-0">v8.1.0</h2>
+                            <span className="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 text-xs font-bold uppercase tracking-wide">
+                                {t('Productivity Engine', '生产力引擎')}
+                            </span>
+                        </div>
+                        <time className="block text-sm text-slate-500">{t('January 18, 2026', '2026年1月18日')}</time>
+                    </header>
+
+                    <div className="bg-slate-50 rounded-xl p-6 border border-slate-100">
+                        <h4 className="flex items-center gap-2 text-sm font-bold text-slate-900 uppercase tracking-widest mb-4">
+                            <ShieldCheck className="w-4 h-4" /> {t('Highlights', '亮点')}
+                        </h4>
+                        <ul className="grid grid-cols-1 gap-3 not-prose">
+                            <li className="flex items-start gap-3">
+                                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-slate-400 flex-shrink-0" />
+                                <span className="text-slate-700">
+                                    <strong>{t('Active Sessions:', '活跃会话：')}</strong> {t('Real-time tracking with live timer and standard time reference.', '带有实时计时器和标准时间参考的实时跟踪。')}
+                                </span>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-slate-400 flex-shrink-0" />
+                                <span className="text-slate-700">
+                                    <strong>{t('Efficiency Analytics:', '效率分析：')}</strong> {t('Automatic calculation of worker efficiency vs standard times.', '自动计算工人效率与标准时间的对比。')}
+                                </span>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-slate-400 flex-shrink-0" />
+                                <span className="text-slate-700">
+                                    <strong>{t('DeepSeek Integration:', 'DeepSeek 集成：')}</strong> {t('Added support for DeepSeek AI for enhanced Chinese context.', '增加了对 DeepSeek AI 的支持，以增强中文语境。')}
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
                 {/* V8.0.0 */}
                 <div className="relative pl-8">
                     <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-indigo-600 ring-4 ring-white shadow-sm" />
