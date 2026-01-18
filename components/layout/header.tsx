@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import { Menu, Github } from 'lucide-react';
+import { Menu, Github, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
     NavigationMenu,
@@ -13,15 +13,17 @@ import {
     navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { useLanguage } from '@/lib/language-context';
 
 export function Header() {
     const [isOpen, setIsOpen] = useState(false);
+    const { language, toggleLanguage, t } = useLanguage();
 
     const menuItems = [
-        { label: 'Features', href: '/#features' },
-        { label: 'How It Works', href: '/#how-it-works' },
-        { label: 'Documentation', href: '/docs' },
-        { label: 'Pricing', href: '/#pricing' },
+        { label: t('Features', '功能'), href: '/#features' },
+        { label: t('How It Works', '工作原理'), href: '/#how-it-works' },
+        { label: t('Documentation', '文档'), href: '/docs' },
+        { label: t('Pricing', '价格'), href: '/#pricing' },
     ];
 
     return (
@@ -59,6 +61,16 @@ export function Header() {
                 </div>
 
                 <div className="hidden md:flex items-center gap-4">
+                    {/* Language Toggle */}
+                    <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={toggleLanguage}
+                        className="flex items-center gap-1.5 text-sm font-medium text-slate-600 hover:text-indigo-600 hover:bg-indigo-50"
+                    >
+                        <Globe className="w-4 h-4" />
+                        {language === 'en' ? '中文' : 'EN'}
+                    </Button>
                     <Button variant="ghost" size="icon" asChild className="hover:bg-slate-100">
                         <Link href="https://github.com/Tropical8818/iProTraX" target="_blank">
                             <Github className="w-5 h-5" />
@@ -66,7 +78,7 @@ export function Header() {
                         </Link>
                     </Button>
                     <Button className="bg-indigo-600 hover:bg-indigo-500 text-white font-medium px-6 h-10 shadow-sm transition-all hover:shadow-md">
-                        Get Started
+                        {t('Get Started', '立即开始')}
                     </Button>
                 </div>
 
@@ -96,6 +108,15 @@ export function Header() {
                                 </Link>
                             ))}
 
+                            {/* Mobile Language Toggle */}
+                            <button
+                                onClick={() => { toggleLanguage(); setIsOpen(false); }}
+                                className="flex items-center gap-2 text-lg font-medium hover:text-indigo-600 py-2"
+                            >
+                                <Globe className="w-5 h-5" />
+                                {language === 'en' ? '切换到中文' : 'Switch to English'}
+                            </button>
+
                             <Link
                                 href="https://github.com/Tropical8818/iProTraX"
                                 className="flex items-center gap-2 text-lg font-medium hover:text-indigo-600 py-2"
@@ -110,3 +131,4 @@ export function Header() {
         </header>
     );
 }
+
