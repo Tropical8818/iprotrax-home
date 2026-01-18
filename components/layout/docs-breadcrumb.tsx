@@ -43,7 +43,7 @@ export function DocsBreadcrumb() {
         });
 
     return (
-        <nav className="flex items-center text-sm text-slate-500 mb-6 overflow-hidden">
+        <nav className="flex items-center text-sm text-slate-500 overflow-hidden">
             <Link href="/" className="hover:text-indigo-600 flex items-center">
                 <Home className="w-4 h-4" />
                 <span className="sr-only">Home</span>

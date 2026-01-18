@@ -90,7 +90,7 @@ export function Header() {
                         </Button>
                     </SheetTrigger>
                     <SheetContent side="right">
-                        <div className="flex flex-col gap-6 mt-8">
+                        <div className="flex flex-col gap-6 mt-8 px-6">
                             <Link href="/" className="flex items-center gap-2 mb-4" onClick={() => setIsOpen(false)}>
                                 <div className="relative w-auto h-12 aspect-[3/1]">
                                     <Image src="/logo.png" alt="Logo" fill className="object-contain object-left" />

@@ -1,6 +1,7 @@
 import { DocsSidebar } from '@/components/layout/docs-sidebar';
 import { DocsPager } from '@/components/layout/docs-pager';
 import { DocsBreadcrumb } from '@/components/layout/docs-breadcrumb';
+import { MobileDocsNav } from '@/components/layout/mobile-docs-nav';
 
 export default function DocsLayout({
     children,
@@ -16,7 +17,10 @@ export default function DocsLayout({
             </aside>
             <main className="relative py-6 lg:gap-10 lg:py-8">
                 <div className="mx-auto w-full min-w-0 max-w-3xl">
-                    <DocsBreadcrumb />
+                    <div className="flex items-center mb-6">
+                        <MobileDocsNav />
+                        <DocsBreadcrumb />
+                    </div>
                     <div className="min-h-[60vh]">
                         {children}
                     </div>

@@ -4,9 +4,12 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useLanguage } from '@/lib/language-context';
 
-interface SidebarNavProps extends React.HTMLAttributes<HTMLElement> { }
+interface SidebarNavProps extends React.HTMLAttributes<HTMLElement> {
+    onLinkClick?: () => void;
+}
 
 const docsConfig = {
+    // ... config remains same ...
     sidebarNav: [
         {
             title: "Getting Started",
@@ -48,7 +51,7 @@ const docsConfig = {
     ]
 };
 
-export function DocsSidebar({ className, ...props }: SidebarNavProps) {
+export function DocsSidebar({ className, onLinkClick, ...props }: SidebarNavProps) {
     const pathname = usePathname();
     const { t } = useLanguage();
 
@@ -65,6 +68,7 @@ export function DocsSidebar({ className, ...props }: SidebarNavProps) {
                                 <Link
                                     key={i}
                                     href={item.href}
+                                    onClick={onLinkClick}
                                     className={`group flex w-full items-center rounded-md border border-transparent px-2 py-1.5 hover:underline text-slate-600 hover:text-indigo-600 ${pathname === item.href ? "font-medium text-indigo-600 bg-indigo-50" : ""
                                         }`}
                                 >
