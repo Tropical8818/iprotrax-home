@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useLanguage } from '@/lib/language-context';
 
 interface SidebarNavProps extends React.HTMLAttributes<HTMLElement> { }
 
@@ -9,35 +10,39 @@ const docsConfig = {
     sidebarNav: [
         {
             title: "Getting Started",
+            titleZh: "入门指南",
             items: [
-                { title: "Introduction", href: "/docs" },
-                { title: "Installation", href: "/docs/installation" },
-                { title: "Architecture", href: "/docs/architecture" },
-                { title: "Changelog", href: "/docs/changelog" },
+                { title: "Introduction", titleZh: "介绍", href: "/docs" },
+                { title: "Installation", titleZh: "安装", href: "/docs/installation" },
+                { title: "Architecture", titleZh: "架构", href: "/docs/architecture" },
+                { title: "Changelog", titleZh: "更新日志", href: "/docs/changelog" },
             ]
         },
         {
             title: "Core Concepts",
+            titleZh: "核心概念",
             items: [
-                { title: "Product Lines", href: "/docs/concepts/product-lines" },
-                { title: "Orders & WO", href: "/docs/concepts/orders" },
-                { title: "Collaboration", href: "/docs/concepts/collaboration" },
-                { title: "AI Analysis", href: "/docs/concepts/ai-analysis" },
+                { title: "Product Lines", titleZh: "生产线", href: "/docs/concepts/product-lines" },
+                { title: "Orders & WO", titleZh: "订单与工单", href: "/docs/concepts/orders" },
+                { title: "Collaboration", titleZh: "协作机制", href: "/docs/concepts/collaboration" },
+                { title: "AI Analysis", titleZh: "AI 分析", href: "/docs/concepts/ai-analysis" },
             ]
         },
         {
             title: "User Manual",
+            titleZh: "用户手册",
             items: [
-                { title: "Dashboard", href: "/docs/manual/dashboard" },
-                { title: "Settings", href: "/docs/manual/settings" },
-                { title: "Kiosk Mode", href: "/docs/manual/kiosk" },
+                { title: "Dashboard", titleZh: "仪表盘", href: "/docs/manual/dashboard" },
+                { title: "Settings", titleZh: "设置", href: "/docs/manual/settings" },
+                { title: "Kiosk Mode", titleZh: "看板模式", href: "/docs/manual/kiosk" },
             ]
         },
         {
             title: "API Reference",
+            titleZh: "API 参考",
             items: [
-                { title: "Overview", href: "/docs/api" },
-                { title: "Endpoints", href: "/docs/api/endpoints" },
+                { title: "Overview", titleZh: "概览", href: "/docs/api" },
+                { title: "Endpoints", titleZh: "端点", href: "/docs/api/endpoints" },
             ]
         }
     ]
@@ -45,13 +50,14 @@ const docsConfig = {
 
 export function DocsSidebar({ className, ...props }: SidebarNavProps) {
     const pathname = usePathname();
+    const { t } = useLanguage();
 
     return (
         <aside className="w-full" {...props}>
             {docsConfig.sidebarNav.map((group, index) => (
                 <div key={index} className="pb-6">
                     <h4 className="mb-2 rounded-md px-2 py-1 text-sm font-semibold text-slate-900">
-                        {group.title}
+                        {t(group.title, group.titleZh)}
                     </h4>
                     {group.items?.length && (
                         <div className="grid grid-flow-row auto-rows-max text-sm gap-1">
@@ -62,7 +68,7 @@ export function DocsSidebar({ className, ...props }: SidebarNavProps) {
                                     className={`group flex w-full items-center rounded-md border border-transparent px-2 py-1.5 hover:underline text-slate-600 hover:text-indigo-600 ${pathname === item.href ? "font-medium text-indigo-600 bg-indigo-50" : ""
                                         }`}
                                 >
-                                    {item.title}
+                                    {t(item.title, item.titleZh)}
                                 </Link>
                             ))}
                         </div>
