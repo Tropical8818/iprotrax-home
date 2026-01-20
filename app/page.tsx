@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Script from 'next/script';
 import { ArrowRight, Clock, Cpu, Layers, ShieldCheck, MessageSquareText, Server, Timer } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -205,6 +206,23 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
+
+      {/* Customer Chat Widget */}
+      <Script
+        src="https://chat.whatifthenhow.com/widget.js"
+        data-host-id="1"
+        data-auto-reg="true"
+        data-login-token=""
+        data-title=""
+        data-logo="https://album.whatifthenhow.com/i/2026/01/20/696f85818f5b8.png"
+        data-theme-color="#1fe1f9"
+        data-close-width="48"
+        data-close-height="48"
+        data-open-width="380"
+        data-open-height="680"
+        data-welcome="Let's have a discussion."
+        strategy="afterInteractive"
+      />
     </div>
   );
 }
