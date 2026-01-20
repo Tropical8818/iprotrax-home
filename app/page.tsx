@@ -6,7 +6,7 @@ import { ArrowRight, Clock, Cpu, Layers, ShieldCheck, MessageSquareText, Server,
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { motion } from 'framer-motion';
-import dashboardPreview from '../assets/dashboard-preview.png';
+
 import { useLanguage } from '@/lib/language-context';
 
 const fadeInUp = {
@@ -74,12 +74,13 @@ export default function Home() {
             className="mt-20 md:mt-24 relative w-full max-w-6xl bg-slate-900 rounded-2xl shadow-2xl border border-slate-200/50 overflow-hidden"
           >
             <Image
-              src={dashboardPreview}
-              alt="iProTraX Dashboard Interface with AI Chat"
+              src="/demo.webp"
+              alt="iProTraX Dashboard Demo"
               className="w-full h-auto"
+              width={1200}
+              height={800}
               priority
-              quality={95}
-              placeholder="blur"
+              unoptimized
             />
             <div className="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-2xl pointer-events-none" />
           </motion.div>
