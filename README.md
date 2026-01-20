@@ -2,7 +2,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Project Demo
 
-![Project Demo](/demo.webp)
+
+<video src="/demo.mp4" controls width="100%"></video>
 
 ## Getting Started
 

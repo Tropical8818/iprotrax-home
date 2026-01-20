@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { ArrowRight, Clock, Cpu, Layers, ShieldCheck, MessageSquareText, Server, Timer } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -73,14 +72,14 @@ export default function Home() {
             variants={fadeInUp}
             className="mt-20 md:mt-24 relative w-full max-w-6xl bg-slate-900 rounded-2xl shadow-2xl border border-slate-200/50 overflow-hidden"
           >
-            <Image
-              src="/demo.webp"
-              alt="iProTraX Dashboard Demo"
+            <video
+              src="/demo.mp4"
               className="w-full h-auto"
-              width={1200}
-              height={800}
-              priority
-              unoptimized
+              controls
+              autoPlay
+              muted
+              loop
+              playsInline
             />
             <div className="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-2xl pointer-events-none" />
           </motion.div>
