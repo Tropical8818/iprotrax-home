@@ -214,7 +214,7 @@ export default function Home() {
         data-auto-reg="true"
         data-login-token=""
         data-title=""
-        data-logo="https://album.whatifthenhow.com/i/2026/01/20/696f85818f5b8.png"
+        data-logo="https://album.whatifthenhow.com/i/2026/01/20/696f879f72e4d.jpg"
         data-theme-color="#1fe1f9"
         data-close-width="48"
         data-close-height="48"
