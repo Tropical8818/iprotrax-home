@@ -19,6 +19,21 @@ interface PricingPlan {
 
 const plans: PricingPlan[] = [
     {
+        id: "community",
+        name: "Community",
+        price: "Free",
+        priceDetail: "forever",
+        description: "Self-hosted for small teams. Open source core.",
+        features: [
+            "Self-Hosted (Docker)",
+            "1 Production Line",
+            "10 Users Included",
+            "Community Support",
+            "Basic Report Export",
+        ],
+        cta: "Download Now",
+    },
+    {
         id: "starter",
         name: "Starter (SaaS)",
         price: "$288",
@@ -90,7 +105,7 @@ export function PricingSection() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
                     {plans.map((plan) => (
                         <div
                             key={plan.id}
