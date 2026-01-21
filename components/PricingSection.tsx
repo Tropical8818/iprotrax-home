@@ -51,7 +51,7 @@ export function PricingSection() {
                 t("Advanced Productivity Engine", "高级生产力引擎"),
                 t("AI Copilot (BYOK API Key)", "AI Copilot (需自备 Key)"),
                 t("Real-time Kiosk Mode", "实时看板模式"),
-                t("Unlimited Users", "无限用户"),
+                t("Up to 500 Users", "多达 500 用户"),
                 t("Full Data Export", "完整数据导出"),
             ],
             cta: t("Contact Sales", "联系销售"),
