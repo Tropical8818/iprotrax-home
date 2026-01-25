@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
-import { ArrowRight, Clock, Cpu, Layers, ShieldCheck, MessageSquareText, Server, Timer } from 'lucide-react';
+import { ArrowRight, Clock, Cpu, Layers, ShieldCheck, MessageSquareText, Webhook, Server, Timer } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { motion } from 'framer-motion';
@@ -46,8 +46,8 @@ function HeroSection() {
 
         <motion.p variants={fadeInUp} className="text-xl md:text-2xl text-slate-600 mb-12 max-w-3xl leading-relaxed font-light">
           {t(
-            'Revolutionize your manufacturing workflow. Seamlessly track production lines, analyze efficiency with AI, and manage orders with precision.',
-            '革新您的制造流程。无缝追踪产线、AI驱动效率分析、精准管理订单。'
+            'Revolutionize your manufacturing workflow. Powered by Rust for security, AI for analysis, and a rich Webhook system for seamless enterprise synchronization.',
+            '革新您的制造流程。Rust 驱动核心安全，AI 提供深度分析，丰富的 Webhook 系统实现企业级无缝同步。'
           )}
         </motion.p>
 
@@ -59,16 +59,16 @@ function HeroSection() {
             </Link>
           </Button>
           <Button size="lg" variant="outline" className="min-w-[180px] h-14 text-lg border-slate-300 rounded-full hover:bg-slate-50 transition-transform hover:scale-105" asChild>
-            <Link href="https://github.com/Tropical8818/iProTraX" target="_blank">
-              {t('View on GitHub', '查看 GitHub')}
+            <Link href="/docs/api">
+              {t('View API Docs', '查看 API 文档')}
             </Link>
           </Button>
         </motion.div>
 
-        {/* Hero Image / Dashboard Preview */}
+        {/* Hero Image / Video Container */}
         <motion.div
           variants={fadeInUp}
-          className="mt-20 md:mt-24 relative w-full max-w-6xl bg-slate-900 rounded-2xl shadow-2xl border border-slate-200/50 overflow-hidden"
+          className="mt-20 md:mt-24 relative w-full max-w-6xl bg-slate-900 rounded-3xl shadow-3xl border-8 border-slate-900/50 shadow-indigo-500/10 overflow-hidden"
         >
           <video
             src="/demo.mp4"
@@ -79,7 +79,7 @@ function HeroSection() {
             loop
             playsInline
           />
-          <div className="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-2xl pointer-events-none" />
+          <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500" />
         </motion.div>
       </motion.div>
     </section>
@@ -125,6 +125,30 @@ function FeaturesSection() {
             )}
           />
           <FeatureCard
+            icon={<Webhook className="w-8 h-8 text-rose-600" />}
+            title={t('Enterprise Webhooks', '企业级 Webhook')}
+            description={t(
+              'Instant notifications to 10+ providers including DingTalk, Feishu, WeChat, and Bark. Custom JSON payload support.',
+              '即时通知 10+ 个平台，包括钉钉、飞书、企业微信和 Bark。支持自定义 JSON 负载。'
+            )}
+          />
+          <FeatureCard
+            icon={<ShieldCheck className="w-8 h-8 text-emerald-600" />}
+            title={t('Rust-Native Security', 'Rust 原生安全')}
+            description={t(
+              'Cryptographic license verification powered by Rust and WebAssembly. ECDSA P-256 signature validation.',
+              '由 Rust 和 WebAssembly 驱动的加密授权验证。采用 ECDSA P-256 签名校验。'
+            )}
+          />
+          <FeatureCard
+            icon={<Server className="w-8 h-8 text-cyan-600" />}
+            title={t('RESTful API v1', 'RESTful API v1')}
+            description={t(
+              'Versioned REST endpoints with Bearer token auth. Seamlessly sync production data with ERP/MES systems.',
+              '带 Bearer 令牌认证的版本化 REST 端点。与 ERP/MES 系统无缝同步生产数据。'
+            )}
+          />
+          <FeatureCard
             icon={<Cpu className="w-8 h-8 text-purple-600" />}
             title={t('AI Intelligence', 'AI 智能')}
             description={t(
@@ -138,22 +162,6 @@ function FeaturesSection() {
             description={t(
               'Secure shop floor displays with auto-scroll and visual priority.',
               '安全的车间显示屏，自动滚动和视觉优先级。'
-            )}
-          />
-          <FeatureCard
-            icon={<ShieldCheck className="w-8 h-8 text-emerald-600" />}
-            title={t('Enterprise Security', '企业级安全')}
-            description={t(
-              'Granular RBAC, encrypted sessions, and isolated environment support.',
-              '细粒度权限控制、加密会话、隔离环境支持。'
-            )}
-          />
-          <FeatureCard
-            icon={<Server className="w-8 h-8 text-cyan-600" />}
-            title={t('Production Ready', '生产就绪')}
-            description={t(
-              'Docker-native architecture. Deploy effortlessly on-premise, cloud, or edge.',
-              'Docker原生架构，轻松部署到本地、云端或边缘设备。'
             )}
           />
           <FeatureCard

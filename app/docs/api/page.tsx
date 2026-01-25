@@ -41,13 +41,37 @@ export default function ApiOverviewPage() {
                 <span className="text-xs text-slate-500 bg-slate-800 px-2 py-1 rounded">GET</span>
             </div>
 
-            <h2 className="text-2xl font-bold mb-6">{t('Authentication', '身份验证')}</h2>
-            <p className="mb-6">
+            <div className="space-y-4 mb-8">
+                <p>
+                    {t(
+                        'iProTraX supports two primary authentication methods for API access:',
+                        'iProTraX 支持两种主要的 API 访问身份验证方法：'
+                    )}
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 not-prose">
+                    <div className="p-5 border rounded-xl bg-white shadow-sm hover:shadow-md transition-shadow">
+                        <h4 className="font-bold text-slate-900 mb-2">{t('Session (Browser)', '会话 (浏览器)')}</h4>
+                        <p className="text-sm text-slate-500 leading-relaxed">{t('Uses Secure HTTP-only cookies. Recommended for internal dashboard extensions and UI-heavy integrations.', '使用安全的 HTTP-only Cookie。推荐用于内部仪表盘扩展和高 UI 交互的集成。')}</p>
+                    </div>
+                    <div className="p-5 border border-indigo-200 rounded-xl bg-indigo-50/30 shadow-sm hover:shadow-md transition-shadow">
+                        <h4 className="font-bold text-indigo-900 mb-2">{t('API Token (v1)', 'API 令牌 (v1)')}</h4>
+                        <p className="text-sm text-indigo-700 leading-relaxed">{t('Standard Bearer token authentication. Designed for ERP/MES synchronization, Python automation scripts, and cross-system webhooks.', '标准 Bearer 令牌身份验证。专为 ERP/MES 同步、Python 自动化脚本和跨系统 Webhook 设计。')}</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 className="text-xl font-bold mb-4">{t('v1 Architecture', 'v1 架构')}</h3>
+            <p>
                 {t(
-                    'Most endpoints require a valid session. We use HTTP-only cookies for security. For external scripts, you can pass an API token (coming soon in v8.1).',
-                    '大多数端点需要有效的会话。为了安全起见，我们使用 HTTP-only Cookie。对于外部脚本，您可以传递 API 令牌（即将于 v8.1 推出）。'
+                    'The v1 API is designed for enterprise-scale data synchronization. It provides consistent, versioned endpoints that ensure backward compatibility while allowing external systems to read real-time production status and update work order progress.',
+                    'v1 API 专为企业级数据同步而设计。它提供一致的版本化端点，确保向后兼容，同时允许外部系统读取实时生产状态并更新工单进度。'
                 )}
             </p>
+
+            <h3 className="text-xl font-bold mb-4">{t('Using Bearer Tokens', '使用 Bearer 令牌')}</h3>
+            <div className="bg-slate-900 p-4 rounded-lg font-mono text-sm text-slate-300 mb-8">
+                Authorization: Bearer ipx_...
+            </div>
 
             <div className="p-4 bg-amber-50 border-l-4 border-amber-500 rounded-r-lg">
                 <p className="m-0 text-amber-800 font-medium text-sm">

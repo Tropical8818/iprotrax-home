@@ -50,6 +50,7 @@ const docsConfig = {
             items: [
                 { title: "Overview", titleZh: "概览", href: "/docs/api" },
                 { title: "Endpoints", titleZh: "端点", href: "/docs/api/endpoints" },
+                { title: "Webhooks", titleZh: "Webhook", href: "/docs/api/webhooks" },
             ]
         }
     ]

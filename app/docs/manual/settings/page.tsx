@@ -1,7 +1,7 @@
 
 'use client';
 
-import { Users, LayoutList, Database, DatabaseBackup } from "lucide-react";
+import { Users, LayoutList, Database, DatabaseBackup, Webhook } from "lucide-react";
 import { useLanguage } from '@/lib/language-context';
 
 export default function SettingsManualPage() {
@@ -78,6 +78,26 @@ export default function SettingsManualPage() {
                             <div className="flex items-center gap-1 text-xs text-indigo-600 font-medium">
                                 <DatabaseBackup className="w-3 h-3" /> {t('Backup', '备份')}
                             </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Integrations */}
+                <div>
+                    <div className="flex items-center gap-3 mb-4">
+                        <Webhook className="w-6 h-6 text-indigo-600" />
+                        <h2 className="text-2xl font-bold m-0 text-slate-900">{t('Connect & Webhooks', '连接与 Webhook')}</h2>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 not-prose">
+                        <div className="border border-indigo-100 bg-indigo-50/20 p-5 rounded-xl">
+                            <div className="font-bold text-indigo-900 mb-2">{t('External Webhooks', '外部 Webhook')}</div>
+                            <p className="text-sm text-indigo-800 mb-3">{t('Push real-time alerts to Slack, DingTalk, Feishu, or Custom URLs.', '将实时警报推送到 Slack、钉钉、飞书或自定义 URL。')}</p>
+                            <span className="inline-flex items-center text-xs font-medium text-indigo-700 bg-indigo-100 px-2.5 py-0.5 rounded-full">{t('Active', '活动')}</span>
+                        </div>
+                        <div className="border border-slate-200 bg-slate-50/30 p-5 rounded-xl">
+                            <div className="font-bold text-slate-900 mb-2">{t('API Key Management', 'API 密钥管理')}</div>
+                            <p className="text-sm text-slate-500 mb-3">{t('Generate and revoke secure keys for automated system integrations.', '生成并撤销用于自动化系统集成的安全密钥。')}</p>
+                            <span className="inline-flex items-center text-xs font-medium text-slate-700 bg-slate-100 px-2.5 py-0.5 rounded-full">{t('Secure', '安全')}</span>
                         </div>
                     </div>
                 </div>

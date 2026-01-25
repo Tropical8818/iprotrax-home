@@ -46,6 +46,26 @@ export default function ArchitecturePage() {
                 </div>
             </div>
 
+            <div className="p-6 bg-slate-900 rounded-2xl text-white mb-12 not-prose shadow-xl border border-slate-800">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="space-y-2">
+                        <div className="text-slate-400 text-xs font-bold uppercase tracking-wider">{t('Frontend & Data', '前端与数据')}</div>
+                        <div className="text-lg font-bold">Next.js 15 + Prisma</div>
+                        <div className="text-sm text-slate-400 italic">React 19 Server Components</div>
+                    </div>
+                    <div className="space-y-2 border-l border-slate-800 pl-8">
+                        <div className="text-slate-400 text-xs font-bold uppercase tracking-wider">{t('Real-time Layer', '实时层')}</div>
+                        <div className="text-lg font-bold">Redis Pub/Sub</div>
+                        <div className="text-sm text-slate-400 italic">SSE & WebSocket Event Streaming</div>
+                    </div>
+                    <div className="space-y-2 border-l border-slate-800 pl-8">
+                        <div className="text-indigo-400 text-xs font-bold uppercase tracking-wider">{t('Native Layer', '原生层')}</div>
+                        <div className="text-lg font-bold text-indigo-300">Rust + WebAssembly</div>
+                        <div className="text-sm text-slate-400 italic">ECDSA P-256 Crypto Verification</div>
+                    </div>
+                </div>
+            </div>
+
             <div className="space-y-8">
                 <div className="p-6 bg-white border rounded-xl shadow-sm">
                     <div className="flex items-center gap-3 mb-4">
@@ -72,6 +92,19 @@ export default function ArchitecturePage() {
                             </p>
                         </div>
                     </div>
+                </div>
+
+                <div className="p-6 bg-white border border-indigo-100 rounded-xl shadow-sm">
+                    <div className="flex items-center gap-3 mb-4">
+                        <div className="p-2 bg-indigo-50 rounded-lg"><Cpu className="w-5 h-5 text-indigo-600" /></div>
+                        <h3 className="text-xl font-bold m-0">{t('Native Layer (Rust & WASM)', '原生层 (Rust & WASM)')}</h3>
+                    </div>
+                    <p>
+                        {t(
+                            'Core security primitives, including ECDSA P-256 signature verification for licenses, are written in Rust and compiled to WebAssembly. This ensures high-performance cryptographic operations on both client and server sides while maintaining a small attack surface.',
+                            '核心安全原语（包括用于授权的 ECDSA P-256 签名验证）均使用 Rust 编写并编译为 WebAssembly。这确保了在保持较小攻击面的同时，客户端和服务器端都能进行高性能的加密操作。'
+                        )}
+                    </p>
                 </div>
 
                 <div className="p-6 bg-gradient-to-r from-purple-50 to-white border border-purple-100 rounded-xl shadow-sm">
