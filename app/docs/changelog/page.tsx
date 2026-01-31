@@ -21,6 +21,46 @@ export default function ChangelogPage() {
             </p>
 
             <div className="relative border-l-2 border-slate-100 ml-4 space-y-12">
+                {/* V8.2.0 */}
+                <div className="relative pl-8">
+                    <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-amber-500 ring-4 ring-white shadow-sm" />
+
+                    <header className="mb-4">
+                        <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 mb-1">
+                            <h2 className="text-2xl font-bold text-slate-900 m-0">v8.2.0</h2>
+                            <span className="px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 text-xs font-bold uppercase tracking-wide">
+                                {t('Smart Scheduler', '智能排程')}
+                            </span>
+                        </div>
+                        <time className="block text-sm text-slate-500">{t('January 31, 2026', '2026年1月31日')}</time>
+                    </header>
+
+                    <div className="bg-slate-50 rounded-xl p-6 border border-slate-100">
+                        <h4 className="flex items-center gap-2 text-sm font-bold text-slate-900 uppercase tracking-widest mb-4">
+                            <ShieldCheck className="w-4 h-4" /> {t('Highlights', '亮点')}
+                        </h4>
+                        <ul className="grid grid-cols-1 gap-3 not-prose">
+                            <li className="flex items-start gap-3">
+                                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-slate-400 flex-shrink-0" />
+                                <span className="text-slate-700">
+                                    <strong>{t('Smart Scheduler 2.0:', '智能排程 2.0：')}</strong> {t('Simplified priority logic (Red Bonus/+1000) and optimized default weights (50/50).', '简化优先级逻辑 (红标加分/+1000) 并优化默认权重 (50/50)。')}
+                                </span>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-slate-400 flex-shrink-0" />
+                                <span className="text-slate-700">
+                                    <strong>{t('Dashboard Sorting:', '仪表盘排序：')}</strong> {t('Enhanced sorting (Red > Yellow > Date).', '增强排序 (红 > 黄 > 日期)。')}
+                                </span>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-slate-400 flex-shrink-0" />
+                                <span className="text-slate-700">
+                                    <strong>{t('Operation UI:', '操作界面：')}</strong> {t('Improved target quantity display in header.', '优化页眉目标数量显示。')}
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 {/* V8.1.0 */}
                 <div className="relative pl-8">
                     <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-emerald-600 ring-4 ring-white shadow-sm" />

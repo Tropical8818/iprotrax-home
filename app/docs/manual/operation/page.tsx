@@ -42,8 +42,8 @@ export default function OperationManualPage() {
                         <h3 className="text-lg font-bold text-slate-900 mt-0">{t('Start Step', '开始步骤')}</h3>
                         <p className="text-slate-600 text-sm m-0">
                             {t(
-                                'Click "Track Progress" to begin a task. A live timer will start, and the task will appear in your "Active Sessions" card.',
-                                '点击“跟踪进度”开始任务。实时计时器将启动，任务将出现在您的“活跃会话”卡片中。'
+                                'Click "Track Progress" to begin a task. The Target Quantity is now displayed in the header for easy reference.',
+                                '点击“跟踪进度”开始任务。目标数量现在显示在页眉中，方便参考。'
                             )}
                         </p>
                     </div>

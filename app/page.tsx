@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
-import { ArrowRight, Clock, Cpu, Layers, ShieldCheck, MessageSquareText, Webhook, Server, Timer } from 'lucide-react';
+import { ArrowRight, Clock, Cpu, Layers, ShieldCheck, MessageSquareText, Webhook, Server, Timer, Activity } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { motion } from 'framer-motion';
@@ -35,7 +35,7 @@ function HeroSection() {
         className="container mx-auto max-w-7xl px-6 md:px-8 flex flex-col items-center text-center relative z-10"
       >
         <motion.div variants={fadeInUp} className="inline-flex items-center rounded-full border border-indigo-200 bg-indigo-50 px-4 py-1.5 text-sm font-medium text-indigo-600 mb-10 shadow-sm">
-          {t('v8.1.0 — Productivity Engine', 'v8.1.0 — 生产力引擎')}
+          {t('v8.2.0 — Smart Scheduler & Autopilot', 'v8.2.0 — 智能排程与自动驾驶')}
           <span className="ml-2 inline-block h-2 w-2 rounded-full bg-indigo-600 animate-pulse" />
         </motion.div>
 
@@ -138,6 +138,14 @@ function FeaturesSection() {
             description={t(
               'Cryptographic license verification powered by Rust and WebAssembly. ECDSA P-256 signature validation.',
               '由 Rust 和 WebAssembly 驱动的加密授权验证。采用 ECDSA P-256 签名校验。'
+            )}
+          />
+          <FeatureCard
+            icon={<Activity className="w-8 h-8 text-amber-500" />}
+            title={t('Smart Scheduler (Autopilot)', '智能排程 (自动驾驶)')}
+            description={t(
+              'Weighted scoring heuristic + AI Engine. Automatically prioritizes orders based on delivery date, aging, and business priority.',
+              '加权启发式算法 + AI 引擎。根据交货日期、老化时间和业务优先级自动优化排程。'
             )}
           />
           <FeatureCard

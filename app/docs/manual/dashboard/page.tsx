@@ -1,7 +1,7 @@
 
 'use client';
 
-import { LayoutGrid, MousePointerClick, Filter } from "lucide-react";
+import { LayoutGrid, MousePointerClick } from "lucide-react";
 import { useLanguage } from '@/lib/language-context';
 
 export default function DashboardPage() {
@@ -49,7 +49,8 @@ export default function DashboardPage() {
                 <div className="p-5 bg-slate-50 rounded-lg border">
                     <h4 className="font-bold text-slate-900 mb-2">{t('1. Detail Columns (Left)', '1. 详细列（左侧）')}</h4>
                     <p className="text-sm text-slate-600">
-                        {t('Fixed information imported from Excel, such as', '从 Excel 导入的固定信息，例如')} <code>WO ID</code>, <code>{t('Part Number', '零件号')}</code>, <code>{t('qty', '数量')}</code>, {t('and', '和')} <code>{t('Due Date', '截止日期')}</code>.
+                        {t('Fixed information imported from Excel, such as', '从 Excel 导入的固定信息，例如')} <code>WO ID</code>, <code>{t('Part Number', '零件号')}</code>, <code>{t('qty', '数量')}</code>, {t('and', '和')} <code>{t('Due Date', '截止日期')}</code>. <br />
+                        <span className="text-xs font-semibold text-slate-500 block mt-2">{t('Default Sorting: High Priority > Warning (QN) > Earliest Due Date', '默认排序：高优先级 > 警告 (QN) > 最早交期')}</span>
                     </p>
                 </div>
                 <div className="p-5 bg-indigo-50 rounded-lg border border-indigo-100">
