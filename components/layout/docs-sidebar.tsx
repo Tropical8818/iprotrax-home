@@ -25,7 +25,7 @@ const docsConfig = {
             title: "Core Concepts",
             titleZh: "核心概念",
             items: [
-                { title: "Product Lines", titleZh: "生产线", href: "/docs/concepts/product-lines" },
+                { title: "Smart Scheduler", titleZh: "智能排程", href: "/docs/concepts/smart-scheduler" },
                 { title: "Productivity Engine", titleZh: "生产力引擎", href: "/docs/concepts/productivity" },
                 { title: "Orders & WO", titleZh: "订单与工单", href: "/docs/concepts/orders" },
                 { title: "Collaboration", titleZh: "协作机制", href: "/docs/concepts/collaboration" },
