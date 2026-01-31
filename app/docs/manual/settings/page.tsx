@@ -60,6 +60,34 @@ export default function SettingsManualPage() {
                     </div>
                 </div>
 
+                {/* Smart Scheduler */}
+                <div>
+                    <div className="flex items-center gap-3 mb-4">
+                        <Users className="w-6 h-6 text-indigo-600" />
+                        <h2 className="text-2xl font-bold m-0 text-slate-900">{t('Smart Scheduler Config', '智能排程配置')}</h2>
+                    </div>
+                    <p className="text-slate-600 mb-4">
+                        {t(
+                            'Customize the Autopilot behavior by adjusting weights. The system uses a weighted scoring heuristic combined with AI analysis.',
+                            '通过调整权重来自定义自动驾驶行为。系统使用加权启发式评分结合 AI 分析。'
+                        )}
+                    </p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
+                        <div className="p-4 border rounded-lg bg-orange-50/50">
+                            <strong className="block text-slate-900 mb-1">{t('Date Weight', '日期权重')}</strong>
+                            <span className="text-xs text-slate-600">{t('Impact of Due Date proximity (Default: 50%)', '截止日期临近程度的影响（默认：50%）')}</span>
+                        </div>
+                        <div className="p-4 border rounded-lg bg-blue-50/50">
+                            <strong className="block text-slate-900 mb-1">{t('Aging Weight', '老化权重')}</strong>
+                            <span className="text-xs text-slate-600">{t('Impact of time spent in current step (Default: 50%)', '在当前步骤停留时间的影响（默认：50%）')}</span>
+                        </div>
+                        <div className="p-4 border rounded-lg bg-red-50/50 sm:col-span-2">
+                            <strong className="block text-red-900 mb-1">{t('Priority Logic', '优先级逻辑')}</strong>
+                            <span className="text-xs text-red-700">{t('High Priority orders receive a fixed bonus (+1000) to override other factors.', '高优先级订单获得固定加分 (+1000) 以覆盖其他因素。')}</span>
+                        </div>
+                    </div>
+                </div>
+
                 {/* Data Mgmt */}
                 <div>
                     <div className="flex items-center gap-3 mb-4">

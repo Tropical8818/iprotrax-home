@@ -117,30 +117,6 @@ function FeaturesSection() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10"
         >
           <FeatureCard
-            icon={<MessageSquareText className="w-8 h-8 text-pink-600" />}
-            title={t('Smart Collaboration', '智能协作')}
-            description={t(
-              'Context-aware chat for every production step. Solve issues directly where they happen.',
-              '工序级的上下文对话，直接在问题发生处解决问题。'
-            )}
-          />
-          <FeatureCard
-            icon={<Webhook className="w-8 h-8 text-rose-600" />}
-            title={t('Enterprise Webhooks', '企业级 Webhook')}
-            description={t(
-              'Instant notifications to 10+ providers including DingTalk, Feishu, WeChat, and Bark. Custom JSON payload support.',
-              '即时通知 10+ 个平台，包括钉钉、飞书、企业微信和 Bark。支持自定义 JSON 负载。'
-            )}
-          />
-          <FeatureCard
-            icon={<ShieldCheck className="w-8 h-8 text-emerald-600" />}
-            title={t('Rust-Native Security', 'Rust 原生安全')}
-            description={t(
-              'Cryptographic license verification powered by Rust and WebAssembly. ECDSA P-256 signature validation.',
-              '由 Rust 和 WebAssembly 驱动的加密授权验证。采用 ECDSA P-256 签名校验。'
-            )}
-          />
-          <FeatureCard
             icon={<Activity className="w-8 h-8 text-amber-500" />}
             title={t('Smart Scheduler (Autopilot)', '智能排程 (自动驾驶)')}
             description={t(
@@ -149,19 +125,19 @@ function FeaturesSection() {
             )}
           />
           <FeatureCard
-            icon={<Server className="w-8 h-8 text-cyan-600" />}
-            title={t('RESTful API v1', 'RESTful API v1')}
-            description={t(
-              'Versioned REST endpoints with Bearer token auth. Seamlessly sync production data with ERP/MES systems.',
-              '带 Bearer 令牌认证的版本化 REST 端点。与 ERP/MES 系统无缝同步生产数据。'
-            )}
-          />
-          <FeatureCard
             icon={<Cpu className="w-8 h-8 text-purple-600" />}
             title={t('AI Intelligence', 'AI 智能')}
             description={t(
               'Leverage LLMs to analyze bottlenecks, auto-generate reports, and parse Excel imports.',
               '利用大语言模型分析瓶颈、自动生成报告、智能解析Excel。'
+            )}
+          />
+          <FeatureCard
+            icon={<MessageSquareText className="w-8 h-8 text-pink-600" />}
+            title={t('Smart Collaboration', '智能协作')}
+            description={t(
+              'Context-aware chat for every production step. Solve issues directly where they happen.',
+              '工序级的上下文对话，直接在问题发生处解决问题。'
             )}
           />
           <FeatureCard
@@ -187,7 +163,31 @@ function FeaturesSection() {
               'Monitor velocity and status instantly. Import orders from Excel.',
               '即时监控进度和状态。从Excel导入订单。'
             )}
-            className="lg:col-start-2"
+          />
+
+          <FeatureCard
+            icon={<Webhook className="w-8 h-8 text-rose-600" />}
+            title={t('Enterprise Webhooks', '企业级 Webhook')}
+            description={t(
+              'Instant notifications to 10+ providers including DingTalk, Feishu, WeChat, and Bark. Custom JSON payload support.',
+              '即时通知 10+ 个平台，包括钉钉、飞书、企业微信和 Bark。支持自定义 JSON 负载。'
+            )}
+          />
+          <FeatureCard
+            icon={<Server className="w-8 h-8 text-cyan-600" />}
+            title={t('RESTful API v1', 'RESTful API v1')}
+            description={t(
+              'Versioned REST endpoints with Bearer token auth. Seamlessly sync production data with ERP/MES systems.',
+              '带 Bearer 令牌认证的版本化 REST 端点。与 ERP/MES 系统无缝同步生产数据。'
+            )}
+          />
+          <FeatureCard
+            icon={<ShieldCheck className="w-8 h-8 text-emerald-600" />}
+            title={t('Rust-Native Security', 'Rust 原生安全')}
+            description={t(
+              'Cryptographic license verification powered by Rust and WebAssembly. ECDSA P-256 signature validation.',
+              '由 Rust 和 WebAssembly 驱动的加密授权验证。采用 ECDSA P-256 签名校验。'
+            )}
           />
         </motion.div>
       </div>
