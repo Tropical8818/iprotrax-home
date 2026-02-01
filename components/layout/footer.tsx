@@ -39,7 +39,7 @@ export function Footer() {
                         <ul className="space-y-3 text-sm text-slate-500">
                             <li><Link href="https://github.com/Tropical8818/iProTraX" className="hover:text-indigo-600">GitHub</Link></li>
                             <li><Link href="https://discord.gg/N9tTUsM8" className="hover:text-indigo-600">Discord</Link></li>
-                            <li><Link href="#" className="hover:text-indigo-600">Twitter</Link></li>
+                            <li><Link href="https://x.com/iProTraX" className="hover:text-indigo-600">Twitter</Link></li>
                         </ul>
                     </div>
                 </div>
@@ -52,7 +52,7 @@ export function Footer() {
                         <Link href="https://github.com/Tropical8818/iProTraX" className="text-slate-400 hover:text-slate-600">
                             <Github className="w-5 h-5" />
                         </Link>
-                        <Link href="#" className="text-slate-400 hover:text-slate-600">
+                        <Link href="https://x.com/iProTraX" className="text-slate-400 hover:text-slate-600">
                             <Twitter className="w-5 h-5" />
                         </Link>
                     </div>
