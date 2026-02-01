@@ -38,7 +38,7 @@ export function Footer() {
                         <h4 className="font-semibold text-slate-900 mb-4">Community</h4>
                         <ul className="space-y-3 text-sm text-slate-500">
                             <li><Link href="https://github.com/Tropical8818/iProTraX" className="hover:text-indigo-600">GitHub</Link></li>
-                            <li><Link href="#" className="hover:text-indigo-600">Discord</Link></li>
+                            <li><Link href="https://discord.gg/N9tTUsM8" className="hover:text-indigo-600">Discord</Link></li>
                             <li><Link href="#" className="hover:text-indigo-600">Twitter</Link></li>
                         </ul>
                     </div>
