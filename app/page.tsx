@@ -152,8 +152,8 @@ function FeaturesSection() {
             icon={<Timer className="w-8 h-8 text-orange-600" />}
             title={t('Productivity Engine', '生产力引擎')}
             description={t(
-              'Track worker efficiency in real-time. Standard time management and supervisor reports.',
-              '实时追踪员工效率。标准工时管理和主管报表。'
+              'Track worker efficiency in real-time. Standard time management, supervisor reports, and Zero-Wait Auto-Flow.',
+              '实时追踪员工效率。标准工时管理、主管报表及零等待自动流转。'
             )}
           />
           <FeatureCard

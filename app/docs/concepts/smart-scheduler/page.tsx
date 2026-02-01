@@ -1,6 +1,6 @@
 'use client';
 
-import { Activity, Calculator, BrainCircuit, GripVertical } from "lucide-react";
+import { Activity, Calculator, BrainCircuit, GripVertical, Zap } from "lucide-react";
 import { useLanguage } from '@/lib/language-context';
 
 export default function SmartSchedulerPage() {
@@ -60,6 +60,19 @@ export default function SmartSchedulerPage() {
                         {t(
                             'DeepSeek AI analyzes historical patterns to suggest optimal weights for your specific product mix.',
                             'DeepSeek AI 分析历史模式，为您特定的产品组合建议最佳权重。'
+                        )}
+                    </p>
+                </div>
+
+                <div className="border border-slate-200 rounded-2xl p-6 bg-white shadow-sm">
+                    <div className="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center mb-4">
+                        <Zap className="w-6 h-6 text-amber-600" />
+                    </div>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">{t('Zero-Wait Auto-Flow', '零等待自动流转')}</h3>
+                    <p className="text-slate-600 text-sm mb-4">
+                        {t(
+                            'Implements a "Pull System" where completing a step automatically schedules the next available step as "Planned", using atomic database transactions to prevent race conditions.',
+                            '实施“拉动式生产”系统（Pull System），完工时自动规划下一步。采用原子数据库事务（Atomic Transaction）防止竞争条件，确保数据一致性。'
                         )}
                     </p>
                 </div>
