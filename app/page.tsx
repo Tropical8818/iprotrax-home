@@ -120,8 +120,8 @@ function FeaturesSection() {
             icon={<Activity className="w-8 h-8 text-amber-500" />}
             title={t('Smart Scheduler (Autopilot)', '智能排程 (自动驾驶)')}
             description={t(
-              'Weighted scoring heuristic + AI Engine. Automatically prioritizes orders based on delivery date, aging, and business priority.',
-              '加权启发式算法 + AI 引擎。根据交货日期、老化时间和业务优先级自动优化排程。'
+              'Weighted scoring heuristic + AI Engine + Zero-Wait Auto-Flow. Automatically prioritizes orders based on delivery date, aging, and business priority.',
+              '加权启发式算法 + AI 引擎 + 零等待自动流转。根据交货日期、老化时间和业务优先级自动优化排程。'
             )}
           />
           <FeatureCard
