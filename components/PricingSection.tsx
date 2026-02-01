@@ -54,7 +54,7 @@ export function PricingSection() {
                 t("Up to 500 Users", "多达 500 用户"),
                 t("Full Data Export", "完整数据导出"),
             ],
-            cta: t("Contact Sales", "联系销售"),
+            cta: t("Contact Author", "联系作者"),
             href: "mailto:contact@iprotrax.work",
         },
         {
@@ -73,7 +73,7 @@ export function PricingSection() {
                 t("Advanced Productivity Engine", "高级生产力引擎"),
                 t("1 Year Support Included", "首年包含技术支持"),
             ],
-            cta: t("Contact Sales", "联系销售"),
+            cta: t("Contact Author", "联系作者"),
             href: "mailto:contact@iprotrax.work",
             highlight: true,
             badge: t("BEST VALUE", "超值首选"),
@@ -94,7 +94,7 @@ export function PricingSection() {
                 t("Dedicated Success Manager", "专属成功经理"),
                 t("On-Premise AI Model Fine-tuning", "私有 AI 模型微调"),
             ],
-            cta: t("Contact Sales", "联系销售"),
+            cta: t("Contact Author", "联系作者"),
             href: "mailto:contact@iprotrax.work",
         },
     ];
@@ -199,7 +199,7 @@ export function PricingSection() {
                             "需要定制部署或有特定安全需求？"
                         )}{" "}
                         <a href="mailto:contact@iprotrax.work" className="text-blue-400 hover:text-blue-300 underline underline-offset-4">
-                            {t("Contact our sales team", "联系我们的销售团队")}
+                            {t("Contact Author", "联系作者")}
                         </a>
                     </p>
                 </div>
