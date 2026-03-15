@@ -27,7 +27,7 @@ export default function ChangelogPage() {
 
                     <header className="mb-4">
                         <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 mb-1">
-                            <h2 className="text-2xl font-bold text-slate-900 m-0">v8.2.0</h2>
+                            <h2 className="text-2xl font-bold text-slate-900 m-0">v8.2.1</h2>
                             <span className="px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 text-xs font-bold uppercase tracking-wide">
                                 {t('Smart Scheduler', '智能排程')}
                             </span>
