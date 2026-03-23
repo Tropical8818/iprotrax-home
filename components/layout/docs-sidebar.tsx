@@ -61,7 +61,7 @@ export function DocsSidebar({ className, onLinkClick, ...props }: SidebarNavProp
     const { t } = useLanguage();
 
     return (
-        <aside className="w-full" {...props}>
+        <aside className={`w-full ${className || ''}`} {...props}>
             {docsConfig.sidebarNav.map((group, index) => (
                 <div key={index} className="pb-6">
                     <h4 className="mb-2 rounded-md px-2 py-1 text-sm font-semibold text-slate-900">
