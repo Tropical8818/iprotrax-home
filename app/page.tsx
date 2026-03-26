@@ -35,7 +35,7 @@ function HeroSection() {
         className="container mx-auto max-w-7xl px-6 md:px-8 flex flex-col items-center text-center relative z-10"
       >
         <motion.div variants={fadeInUp} className="inline-flex items-center rounded-full border border-indigo-200 bg-indigo-50 px-4 py-1.5 text-sm font-medium text-indigo-600 mb-10 shadow-sm">
-          {t('v8.2.0 — Smart Scheduler & Autopilot', 'v8.2.0 — 智能排程与自动驾驶')}
+          {t('v8.2.1 — Smart Scheduler & Autopilot', 'v8.2.1 — 智能排程与自动驾驶')}
           <span className="ml-2 inline-block h-2 w-2 rounded-full bg-indigo-600 animate-pulse" />
         </motion.div>
 
