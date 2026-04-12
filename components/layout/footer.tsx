@@ -37,7 +37,7 @@ export function Footer() {
                     <div>
                         <h4 className="font-semibold text-slate-900 mb-4">Community</h4>
                         <ul className="space-y-3 text-sm text-slate-500">
-                            <li><Link href="https://github.com/Tropical8818/iProTraX" className="hover:text-indigo-600">GitHub</Link></li>
+                            <li><Link href="hhttps://gitea.puppy101.dpdns.org/Gloomy1112/iProTraX" className="hover:text-indigo-600">GitHub</Link></li>
                             <li><Link href="https://discord.gg/N9tTUsM8" className="hover:text-indigo-600">Discord</Link></li>
                             <li><Link href="https://x.com/iProTraX" className="hover:text-indigo-600">Twitter</Link></li>
                         </ul>
@@ -49,7 +49,7 @@ export function Footer() {
                         © {new Date().getFullYear()} iProTraX. All rights reserved.
                     </p>
                     <div className="flex items-center gap-4">
-                        <Link href="https://github.com/Tropical8818/iProTraX" className="text-slate-400 hover:text-slate-600">
+                        <Link href="https://gitea.puppy101.dpdns.org/Gloomy1112/iProTraX" className="text-slate-400 hover:text-slate-600">
                             <Github className="w-5 h-5" />
                         </Link>
                         <Link href="https://x.com/iProTraX" className="text-slate-400 hover:text-slate-600">
