@@ -118,7 +118,7 @@ export function Header() {
                             </button>
 
                             <Link
-                                href="https://github.com/Tropical8818/iProTraX"
+                                href="https://gitea.puppy101.dpdns.org/Gloomy1112/iProTraX"
                                 className="flex items-center gap-2 text-lg font-medium hover:text-indigo-600 py-2"
                             >
                                 <Github className="w-5 h-5" />
