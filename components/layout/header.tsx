@@ -72,7 +72,7 @@ export function Header() {
                         {language === 'en' ? '中文' : 'EN'}
                     </Button>
                     <Button variant="ghost" size="icon" asChild className="hover:bg-slate-100">
-                        <Link href="https://github.com/Tropical8818/iProTraX" target="_blank">
+                        <Link href="https://gitea.puppy101.dpdns.org/Gloomy1112/iProTraX" target="_blank">
                             <Github className="w-5 h-5" />
                             <span className="sr-only">GitHub</span>
                         </Link>
